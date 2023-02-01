@@ -14,7 +14,7 @@ filetype plugin indent on
 " Syntax highlighting.
 syntax on
 " Setting colorscheme
-"color mycolor
+color mycolor
 " Other settings.
 set   autoindent
 set   autoread
@@ -86,6 +86,8 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
+" NERDTree
+command! NT NERDTree
 " Grep.vim 
 nnoremap <silent> <F7> :Grep<CR>
 inoremap <C-h> <Esc><C-W>h
@@ -175,3 +177,12 @@ nmap <leader>sd :cs find d <C-R>=expand("<cword>")<cr><cr>
 nmap <leader>zz <C-w>o
 nmap <leader>gs :GetScripts<cr>
 nmap wm :WMToggle<cr>
+
+" plugin call put between begin() and end()
+" plugin for fugitive
+call plug#begin()
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+call plug#end()
+
